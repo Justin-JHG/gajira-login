@@ -48,7 +48,7 @@ class Jira {
 
   async getMyself () {
     return this.fetch('getMyself',
-      { pathname: '/rest/api/2/myself' }, {
+      { pathname: '/rest/api/3/myself' }, {
         method: 'GET',
       })
   }
@@ -64,7 +64,7 @@ class Jira {
 
     try {
       return this.fetch('getIssue', {
-        pathname: `/rest/api/2/issue/${issueId}`,
+        pathname: `/rest/api/3/issue/${issueId}`,
         query: {
           fields: fields.join(','),
           expand: expand.join(','),
@@ -81,7 +81,7 @@ class Jira {
 
   async getIssueTransitions (issueId) {
     return this.fetch('getIssueTransitions', {
-      pathname: `/rest/api/2/issue/${issueId}/transitions`,
+      pathname: `/rest/api/3/issue/${issueId}/transitions`,
     }, {
       method: 'GET',
     })
@@ -89,7 +89,7 @@ class Jira {
 
   async transitionIssue (issueId, data) {
     return this.fetch('transitionIssue', {
-      pathname: `/rest/api/2/issue/${issueId}/transitions`,
+      pathname: `/rest/api/3/issue/${issueId}/transitions`,
     }, {
       method: 'POST',
       body: data,
