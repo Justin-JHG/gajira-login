@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-module.exports = serviceName => async (state, apiMethod = 'unknown') => {
+const yourFunction = serviceName => async (state, apiMethod = 'unknown') => {
   const response = await fetch(state.req.url, state.req);
 
   state.res = {
@@ -22,3 +22,5 @@ module.exports = serviceName => async (state, apiMethod = 'unknown') => {
 
   return state;
 };
+
+export default yourFunction;

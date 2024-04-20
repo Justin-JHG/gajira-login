@@ -159,11 +159,16 @@ module.exports = Jira
 /***/ }),
 
 /***/ 4673:
-/***/ ((module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
 // ESM COMPAT FLAG
 __nccwpck_require__.r(__webpack_exports__);
+
+// EXPORTS
+__nccwpck_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ client)
+});
 
 ;// CONCATENATED MODULE: external "node:http"
 const external_node_http_namespaceObject = require("node:http");
@@ -2311,10 +2316,9 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 }
 
 ;// CONCATENATED MODULE: ./common/net/client.js
-/* module decorator */ module = __nccwpck_require__.hmd(module);
 
 
-module.exports = serviceName => async (state, apiMethod = 'unknown') => {
+const yourFunction = serviceName => async (state, apiMethod = 'unknown') => {
   const response = await fetch(state.req.url, state.req);
 
   state.res = {
@@ -2336,6 +2340,8 @@ module.exports = serviceName => async (state, apiMethod = 'unknown') => {
 
   return state;
 };
+
+/* harmony default export */ const client = (yourFunction);
 
 
 /***/ }),
@@ -33441,21 +33447,6 @@ return new B(c,{type:"multipart/form-data; boundary="+b})}
 /******/ 		__nccwpck_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
 /******/ 			return "" + chunkId + ".index.js";
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/harmony module decorator */
-/******/ 	(() => {
-/******/ 		__nccwpck_require__.hmd = (module) => {
-/******/ 			module = Object.create(module);
-/******/ 			if (!module.children) module.children = [];
-/******/ 			Object.defineProperty(module, 'exports', {
-/******/ 				enumerable: true,
-/******/ 				set: () => {
-/******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
-/******/ 				}
-/******/ 			});
-/******/ 			return module;
 /******/ 		};
 /******/ 	})();
 /******/ 	
