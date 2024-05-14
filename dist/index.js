@@ -1,36 +1,7 @@
 require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 4582:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-const Jira = __nccwpck_require__(9497)
-
-module.exports = class {
-  constructor ({ githubEvent, argv, config }) {
-    this.Jira = new Jira({
-      baseUrl: config.baseUrl,
-      token: config.token,
-      email: config.email,
-    })
-
-    this.config = config
-    this.argv = argv
-    this.githubEvent = githubEvent
-  }
-
-  async execute () {
-    await this.Jira.getMyself()
-    console.log(`Successfully logged in.`)
-
-    return this.config
-  }
-}
-
-
-/***/ }),
-
-/***/ 9497:
+/***/ 8218:
 /***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -39,7 +10,7 @@ __nccwpck_require__.r(__webpack_exports__);
 
 // EXPORTS
 __nccwpck_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ net_Jira)
+  "default": () => (/* binding */ action)
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/lodash.js
@@ -168,6 +139,30 @@ class Jira {
 }
 
 /* harmony default export */ const net_Jira = (Jira);
+
+;// CONCATENATED MODULE: ./action.js
+
+
+/* harmony default export */ const action = (class {
+  constructor ({ githubEvent, argv, config }) {
+    this.Jira = new net_Jira({
+      baseUrl: config.baseUrl,
+      token: config.token,
+      email: config.email,
+    })
+
+    this.config = config
+    this.argv = argv
+    this.githubEvent = githubEvent
+  }
+
+  async execute () {
+    await this.Jira.getMyself()
+    console.log(`Successfully logged in.`)
+
+    return this.config
+  }
+});
 
 
 /***/ }),
@@ -33535,7 +33530,7 @@ const cliConfigPath = `${process.env.HOME}/.jira.d/config.yml`
 const cliCredentialsPath = `${process.env.HOME}/.jira.d/credentials`
 const configPath = `${process.env.HOME}/jira/config.yml`
 
-const Action = __nccwpck_require__(4582)
+const Action = __nccwpck_require__(8218)
 
 // eslint-disable-next-line import/no-dynamic-require
 const githubEvent = require(process.env.GITHUB_EVENT_PATH)
