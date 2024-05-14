@@ -4,7 +4,7 @@
   "description": "Used to store credentials for later use in CLI action",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "test": "exit 1",
     "build": "ncc build index.js -s",
     "start": "ncc build index.js -w",
