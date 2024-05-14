@@ -1,5 +1,5 @@
 {
-  "name": "@Justin-JHG/gajigitra-login",
+  "name": "gajigitra-login",
   "version": "1.0.0",
   "description": "Used to store credentials for later use in CLI action",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "author": "Justin Liu",
   "license": "ISC",
   "dependencies": {
-    "husky": "^9.0.11",
+    "husky": "^8.0.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "yaml": "^2.4.2",
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0",
-    "eslint": "^9.2.0",
-    "node-fetch": "^3.3.2",
+    "eslint": "^8.57.0",
+    "node-fetch": "^2.6.7",
     "npm-run-all": "^4.1.5"
   }
 }
