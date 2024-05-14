@@ -1,6 +1,6 @@
-const fetch = require('node-fetch')
+import fetch from 'node-fetch'
 
-module.exports = serviceName => async (state, apiMethod = 'unknown') => {
+export default serviceName => async (state, apiMethod = 'unknown') => {
   const response = await fetch(state.req.url, state.req)
 
   state.res = {

@@ -1,9 +1,8 @@
-const { get } = require('lodash')
-const fetch = require('node-fetch');
+import { get } from 'lodash';
 
 const serviceName = 'jira'
-const { format } = require('url')
-const client = require('./client')(serviceName)
+import { format } from 'url';
+const client = require('./client').default(serviceName)
 
 class Jira {
   constructor ({ baseUrl, token, email }) {
@@ -119,4 +118,4 @@ class Jira {
   }
 }
 
-module.exports = Jira
+export default Jira
