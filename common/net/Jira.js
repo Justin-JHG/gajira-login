@@ -1,4 +1,5 @@
 const { get } = require('lodash')
+const fetch = require('node-fetch');
 
 const serviceName = 'jira'
 const { format } = require('url')

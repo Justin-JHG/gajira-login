@@ -34,6 +34,7 @@ module.exports = class {
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const { get } = __nccwpck_require__(250)
+const fetch = __nccwpck_require__(4429);
 
 const serviceName = 'jira'
 const { format } = __nccwpck_require__(7310)
