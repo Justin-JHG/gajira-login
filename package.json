@@ -1,6 +1,6 @@
 {
-  "name": "@atlassian/gajira-login",
-  "version": "3.0.1",
+  "name": "gajigitra-login",
+  "version": "1.0.0",
   "description": "Used to store credentials for later use in CLI action",
   "main": "index.js",
   "scripts": {
@@ -11,19 +11,19 @@
     "lint": "eslint",
     "precommit": "run-p lint build"
   },
-  "author": "Atlassian <github@atlassian.com>",
+  "author": "Justin Liu",
   "license": "ISC",
   "dependencies": {
     "husky": "^8.0.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
-    "yaml": "^2.1.3",
+    "yaml": "^2.4.2",
     "yargs": "^17.6.2"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0",
     "eslint": "^8.57.0",
-    "node-fetch": "^2.6.7",
+    "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5"
   }
 }
