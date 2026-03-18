@@ -1,8 +1,9 @@
-const { get } = require('lodash')
+import { get } from 'lodash'
+import { format } from 'url'
+import createClient from './client.js'
 
 const serviceName = 'jira'
-const { format } = require('url')
-const client = require('./client')(serviceName)
+const client = createClient(serviceName)
 
 class Jira {
   constructor ({ baseUrl, token, email }) {
@@ -118,4 +119,4 @@ class Jira {
   }
 }
 
-module.exports = Jira
+export default Jira
