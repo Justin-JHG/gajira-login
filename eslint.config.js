@@ -1,10 +1,13 @@
-import { Linter } from "eslint";
+// @ts-check
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import importPlugin from "eslint-plugin-import";
 
-/** @type {Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
+  {
+    ignores: ["dist/**", "node_modules/**"]
+  },
   {
     files: ["**/*.js"],
     plugins: {

@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-export default serviceName => async (state, apiMethod = 'unknown') => {
+export default _serviceName => async (state, _apiMethod = 'unknown') => {
   const response = await fetch(state.req.url, state.req)
 
   state.res = {
