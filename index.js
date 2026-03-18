@@ -1,15 +1,20 @@
-const fs = require('fs')
-const path = require('path')
-const YAML = require('yaml')
+import fs from 'fs'
+import path from 'path'
+import YAML from 'yaml'
+import { fileURLToPath } from 'url'
+import { dirname } from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const cliConfigPath = `${process.env.HOME}/.jira.d/config.yml`
 const cliCredentialsPath = `${process.env.HOME}/.jira.d/credentials`
 const configPath = `${process.env.HOME}/jira/config.yml`
 
-const Action = require('./action')
+import Action from './action.js'
 
-// eslint-disable-next-line import/no-dynamic-require
-const githubEvent = require(process.env.GITHUB_EVENT_PATH)
+// Read the GitHub event from the file
+const githubEvent = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'))
 
 async function exec () {
   try {
