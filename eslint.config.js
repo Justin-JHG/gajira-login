@@ -1,5 +1,6 @@
 import { Linter } from "eslint";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
+import typescriptEslintParser from "@typescript-eslint/parser";
 import importPlugin from "eslint-plugin-import";
 
 /** @type {Linter.FlatConfig[]} */
@@ -28,7 +29,7 @@ export default [
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
-      parser: "@typescript-eslint/parser",
+      parser: typescriptEslintParser,
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
