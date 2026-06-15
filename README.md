@@ -12,6 +12,7 @@ This is required by other actions like:
 - [`TODO`](https://github.com/marketplace/actions/jira-issue-from-todo) - Create a Jira issue for each TODO comment in committed code
 - [`CLI`](https://github.com/marketplace/actions/setup-jira) - Wrapped [go-jira](https://github.com/Netflix-Skunkworks/go-jira) CLI for common Jira actions
 
+
 ## Usage
 An example workflow to create a Jira issue for each `//TODO` in code:
 
